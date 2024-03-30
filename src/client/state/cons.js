@@ -1,13 +1,13 @@
 const cons = {
   version: '3.2.0',
   secretKey: {
-    ACCESS_TOKEN: 'cinny_access_token',
-    DEVICE_ID: 'cinny_device_id',
-    USER_ID: 'cinny_user_id',
-    BASE_URL: 'cinny_hs_base_url',
+    ACCESS_TOKEN: 'piplink_access_token',
+    DEVICE_ID: 'piplink_device_id',
+    USER_ID: 'piplink_user_id',
+    BASE_URL: 'piplink_hs_base_url',
   },
-  DEVICE_DISPLAY_NAME: 'Cinny Web',
-  IN_CINNY_SPACES: 'in.cinny.spaces',
+  DEVICE_DISPLAY_NAME: 'Piplink Client',
+  IN_PIPLINK_SPACES: 'in.piplink.spaces',
   tabs: {
     HOME: 'home',
     DIRECTS: 'dm',
@@ -19,10 +19,7 @@ const cons = {
     'm.room.member',
     'm.sticker',
   ],
-  supportReceiptTypes: [
-    'm.read',
-    'm.read.private',
-  ],
+  supportReceiptTypes: ['m.read', 'm.read.private'],
   notifs: {
     DEFAULT: 'default',
     ALL_MESSAGES: 'all_messages',

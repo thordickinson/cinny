@@ -40,7 +40,7 @@ jobs:
         id: vars
         run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
       - name: Create tar.gz
-        run: tar -czvf cinny-${{ steps.vars.outputs.tag }}.tar.gz dist
+        run: tar -czvf piplink-${{ steps.vars.outputs.tag }}.tar.gz dist
       - name: Sign tar.gz
         run: |
           echo '${{ secrets.GNUPG_KEY }}' | gpg --batch --import
@@ -55,8 +55,8 @@ jobs:
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
         with:
           files: |
-            cinny-${{ steps.vars.outputs.tag }}.tar.gz
-            cinny-${{ steps.vars.outputs.tag }}.tar.gz.asc
+            piplink-${{ steps.vars.outputs.tag }}.tar.gz
+            piplink-${{ steps.vars.outputs.tag }}.tar.gz.asc
 
   publish-image:
     name: Push Docker image to Docker Hub, ghcr
@@ -87,7 +87,7 @@ jobs:
         uses: docker/metadata-action@v4.6.0
         with:
           images: |
-            ${{ secrets.DOCKER_USERNAME }}/cinny
+            ${{ secrets.DOCKER_USERNAME }}/piplink
             ghcr.io/${{ github.repository }}
       - name: Build and push Docker image
         uses: docker/build-push-action@v4.1.1

@@ -1,7 +1,7 @@
 {
-  "name": "Cinny",
-  "short_name": "Cinny",
-  "description": "Yet another matrix client",
+  "name": "Piplink",
+  "short_name": "Piplink",
+  "description": "Powerful people connection platform",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",

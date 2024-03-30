@@ -30,16 +30,16 @@ const FALLBACK_STORE_NAME: SessionStoreName = {
 } as const;
 
 const removeFallbackSession = () => {
-  localStorage.removeItem('cinny_hs_base_url');
-  localStorage.removeItem('cinny_user_id');
-  localStorage.removeItem('cinny_device_id');
-  localStorage.removeItem('cinny_access_token');
+  localStorage.removeItem('piplink_hs_base_url');
+  localStorage.removeItem('piplink_user_id');
+  localStorage.removeItem('piplink_device_id');
+  localStorage.removeItem('piplink_access_token');
 };
 const getFallbackSession = (): Session | undefined => {
-  const baseUrl = localStorage.getItem('cinny_hs_base_url');
-  const userId = localStorage.getItem('cinny_user_id');
-  const deviceId = localStorage.getItem('cinny_device_id');
-  const accessToken = localStorage.getItem('cinny_access_token');
+  const baseUrl = localStorage.getItem('piplink_hs_base_url');
+  const userId = localStorage.getItem('piplink_user_id');
+  const deviceId = localStorage.getItem('piplink_device_id');
+  const accessToken = localStorage.getItem('piplink_access_token');
 
   if (baseUrl && userId && deviceId && accessToken) {
     const session: Session = {
